@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 body{
     padding:0px 0px 0px 0px;
     z-index:0;
@@ -86,8 +87,11 @@ body{
 
 }
 .cards_{
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .box_{
     width: 280px;
     height: 350px;
@@ -105,14 +109,25 @@ body{
     -webkit-transition: box-shadow 0.5s linear;/*safari and chrome */
     box-sizing: border-box;
     line-height: 2px;
+    padding:1rem;
+    cursor:pointer;
+    border-radius: 0.5rem;
+}
+.box_>h3{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+.box_>h6{
+    font-size: 15px;
+    font-family: monospace;
+}
+.card_img{
+    padding:5px;
 }
 .box_:hover{
     box-shadow: 3px 3px 4px 5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-}
-.box_ h3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25;
+    transform:scale(1.02);
 }
 .quotes{
     text-align: center;
