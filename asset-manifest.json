@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5a3ffcf9.chunk.css",
+    "main.js": "/static/js/main.c438aba0.chunk.js",
+    "main.js.map": "/static/js/main.c438aba0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a5f168c9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a5f168c9.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.6dc0d06a.chunk.js": "/static/js/2.6dc0d06a.chunk.js",
+    "static/js/2.6dc0d06a.chunk.js.map": "/static/js/2.6dc0d06a.chunk.js.map",
+    "static/js/3.e3320a38.chunk.js": "/static/js/3.e3320a38.chunk.js",
+    "static/js/3.e3320a38.chunk.js.map": "/static/js/3.e3320a38.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.5a3ffcf9.chunk.css.map": "/static/css/main.5a3ffcf9.chunk.css.map",
+    "static/js/2.6dc0d06a.chunk.js.LICENSE.txt": "/static/js/2.6dc0d06a.chunk.js.LICENSE.txt",
+    "static/media/Animation.701961de.gif": "/static/media/Animation.701961de.gif",
+    "static/media/Calculator.0c2d3c3f.gif": "/static/media/Calculator.0c2d3c3f.gif",
+    "static/media/c19.00919181.png": "/static/media/c19.00919181.png",
+    "static/media/cal.4fd64f69.gif": "/static/media/cal.4fd64f69.gif",
+    "static/media/circle.1567f528.svg": "/static/media/circle.1567f528.svg",
+    "static/media/django.7fd4ff35.svg": "/static/media/django.7fd4ff35.svg",
+    "static/media/logo.3f5d3fcd.png": "/static/media/logo.3f5d3fcd.png",
+    "static/media/lr.5e32a09f.gif": "/static/media/lr.5e32a09f.gif",
+    "static/media/mp.fc2f662b.gif": "/static/media/mp.fc2f662b.gif",
+    "static/media/name.6ac4cad2.svg": "/static/media/name.6ac4cad2.svg",
+    "static/media/notepad.70190993.gif": "/static/media/notepad.70190993.gif",
+    "static/media/robo.275502fd.svg": "/static/media/robo.275502fd.svg",
+    "static/media/speed.8c04f444.gif": "/static/media/speed.8c04f444.gif",
+    "static/media/todo.be77aa1b.gif": "/static/media/todo.be77aa1b.gif",
+    "static/media/work.3d5cd80d.svg": "/static/media/work.3d5cd80d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a5f168c9.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.6dc0d06a.chunk.js",
+    "static/css/main.5a3ffcf9.chunk.css",
+    "static/js/main.c438aba0.chunk.js"
+  ]
+}
