@@ -1,0 +1,19 @@
+.name_skill{
+    text-align: center;
+    margin-top: 150px;
+}
+.skills{
+    text-align: center;
+}
+.skills_icon{
+    padding: 20px;
+    margin-top: 20px;
+}
+.skills_icon:hover{
+    color: red;
+    font-size: 16px;
+}
+.skills_icon img:hover{
+    filter: saturate(3);
+    filter: sepia(100%);
+}
