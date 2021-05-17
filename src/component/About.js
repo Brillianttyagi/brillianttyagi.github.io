@@ -17,13 +17,13 @@ class About extends Component {
                         </Card>
                     </Col>
                     <Col>
-                    <Card>
+                    <Card style={{marginBottom : "30px"}}>
                             <Card.Body>
                             <Card.Title>About</Card.Title>
                             <Card.Text>
                             I'm Deepanshu tyagi,currently persuing Btech in Computer science engineering from Dr.APJ abdul kalam
-                            technical University.I'm a Web developer and learning data science with keen understanding of Python
-                            ,html,css,django,data structure.
+                            technical University.I'm a Student and continuously learning to upgrad my knowledge, with keen understanding of Python
+                            ,Html, CSS, Django, Data structure.
                             </Card.Text>
                         </Card.Body>
                     </Card>

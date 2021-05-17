@@ -19,7 +19,7 @@ class Foot extends Component {
                             <ul class="list-unstyled">
                                 <li><Link className="navlink" to="/">Home</Link></li>
                                 <li><Link className="navlink" to="/project">Project</Link></li>
-                                <li><a id="links" href="#">Resume</a></li>
+                                <li><a className="navlink" href="https://drive.google.com/file/d/1BUQDlfjI15MYQKErLx157MRJk30hbuQT/view?usp=sharing">Resume</a></li>
                                 <li><Link className="navlink" to="/Contact">Contact</Link></li>
                                 <li><Link className="navlink" to="/About">About</Link></li>
                             </ul>

@@ -17,8 +17,7 @@ class Navb extends Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                     <Link className="navlinkh" to="/">Home</Link>
-                    <Link className="navlinkh" to="/project">Project</Link>
-                    <a className="navlinkh" herf="https://drive.google.com/file/d/1BUQDlfjI15MYQKErLx157MRJk30hbuQT/view?usp=sharing">Resume</a>
+                    <a className="navlinkh" href="https://drive.google.com/file/d/1BUQDlfjI15MYQKErLx157MRJk30hbuQT/view?usp=sharing">Resume</a>
                     <Link className="navlinkh" to="/Contact">Contact Me</Link>
                     <Link className="navlinkh" to="/About">About Me</Link>
                     </Nav>

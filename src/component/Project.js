@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container,Row,Card } from 'react-bootstrap'
+import { Container,Row,Card,Col } from 'react-bootstrap'
 import blog from './images/Animation.gif'
 import Calculator from './images/Calculator.gif'
 import speed from './images/speed.gif'
@@ -15,7 +15,8 @@ class Project extends Component {
         return ( 
             <Container>
                 <h1 className="projects">Projects</h1>
-                <Row>
+                <Row xs="1" sm="2" md="3">
+                    <Col>
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -31,6 +32,9 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
+                    </Col> 
+                    <Col>
+
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -45,7 +49,9 @@ class Project extends Component {
                                 </Card.Body>
                             </Card>
                         </div>
-                    </Card>
+                    </Card> 
+                    </Col>
+                    <Col>
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -61,6 +67,8 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
+                    </Col> 
+                    <Col>
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -75,10 +83,14 @@ class Project extends Component {
                                 </Card.Body>
                             </Card>
                         </div>
-                    </Card>
+                    </Card>  
+                    </Col>        
                 </Row>
+                
                 <h1>Python</h1>
-                <Row>
+                <Row xs="1" sm="2" md="3">
+                    <Col>
+
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -93,6 +105,8 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
+                    </Col>
+                    <Col>
 
                     <Card className="m-3">
                         <div>
@@ -108,6 +122,8 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
+                    </Col>
+                    <Col>
 
                     <Card className="m-3">
                         <div>
@@ -123,9 +139,11 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
+                    </Col>
                 </Row>
                 <h1>JS & HTML & CSS</h1>
-                <Row>
+                <Row xs="1" sm="2" md="3">
+                    <Col>
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -141,7 +159,8 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
-
+                    </Col>
+                    <Col>
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -157,7 +176,8 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
-
+                    </Col>
+                    <Col>
                     <Card className="m-3">
                         <div>
                             <Card style={{ width: '18rem' }}>
@@ -173,6 +193,7 @@ class Project extends Component {
                             </Card>
                         </div>
                     </Card>
+                    </Col>
                 </Row>
             </Container>
          );
