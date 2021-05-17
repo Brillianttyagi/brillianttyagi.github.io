@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Container,Row,Col } from 'react-bootstrap'
+import { Row,Col } from 'react-bootstrap'
 import './css/Footer.css'
 import {
     Link
   } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub,faCodiepie,faTwitter,faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 class Foot extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container,Row,Col,Card,Button } from 'react-bootstrap'
+import { Container,Row,Col,Card } from 'react-bootstrap'
 import name from './images/name.svg'
 class About extends Component {
     render() { 

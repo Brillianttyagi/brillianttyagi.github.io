@@ -3,7 +3,6 @@ import { Container,Row,Col,Card,Button } from 'react-bootstrap'
 import robo from './images/robo.svg'
 import './css/contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {faGithub,faTwitter,faCodepen,faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 class Contact extends Component {
@@ -21,20 +20,7 @@ class Contact extends Component {
                     </Col>
                     <Col><img className="img_robo" src={ robo } alt="robo" /></Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <Card className="p-5 m-3">
-                            <h3>Send Me An Email</h3>
-                            <input type="text" placeholder="Name" id="name" name="sname" /><br/>
-                            <input type="email" id="email" placeholder="Email" name="semail"/><br/>
-                            <input type="textarea" id="textarea" placeholder="Go ahead! We are listening..." name="stextarea"/><br/>
-                            <Button variant="success" style={{ color:"black" }}>SUBMIT</Button>   
-                        </Card>
-                    </Col>
-                    <Col>
 
-                    </Col>
-                </Row>
             </Container>
          );
     }

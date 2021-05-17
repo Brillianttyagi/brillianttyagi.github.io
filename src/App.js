@@ -17,21 +17,21 @@ function App() {
     <div className="App">
       <Router basename={process.env.PUBLIC_URL}>
         <Navb/>
-        <Switch>
-          <Route path="/contact">
-            <Contact/>
-          </Route>
-          <Route path="/about">
-            <About/>
-          </Route>
-          <Route path="/project">
-            <Project/>
-          </Route>
-          <Route path="/">
-            <Main/>
-            <Skill/>
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/contact">
+              <Contact/>
+            </Route>
+            <Route path="/about">
+              <About/>
+            </Route>
+            <Route path="/project">
+              <Project/>
+            </Route>
+            <Route path="/">
+              <Main/>
+              <Skill/>
+            </Route>
+          </Switch>
         <Foot/>
       </Router>
     </div>
