@@ -42,6 +42,8 @@ class Main extends Component {
                     <Col><img className="Programming" src={ Work } alt="Programming guy"/></Col>
                 </Row>
                 <div className='circlenew'></div>
+                <div className='circlenew' id="circlesmall"></div>
+                <div className='circlenew' id="circlemed"></div>
             </Container>
          );
     }

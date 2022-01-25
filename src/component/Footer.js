@@ -14,29 +14,6 @@ class Foot extends Component {
             <div className="footercon">
                 <Row className="rows">
                     <Col>
-                        <div class="col-5 offset-1 col-sm-2">
-                            <h5>Links</h5>
-                            <ul class="list-unstyled">
-                                <li><Link className="navlink" to="/">Home</Link></li>
-                                <li><Link className="navlink" to="/project">Project</Link></li>
-                                <li><a className="navlink" href="https://drive.google.com/file/d/1BUQDlfjI15MYQKErLx157MRJk30hbuQT/view?usp=sharing">Resume</a></li>
-                                <li><Link className="navlink" to="/Contact">Contact</Link></li>
-                                <li><Link className="navlink" to="/About">About</Link></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div class="address">
-                            <h5>Contact</h5>
-                            <address>
-                                Uttar pradesh<br/>
-                                India<br/>
-                                <FontAwesomeIcon icon={faEnvelope} />
-                                <a href="mailto:deepanshubhai84@gmail.com">Mail Me</a>
-                            </address>
-                        </div>
-                    </Col>
-                    <Col>
                         <div>
                             <a id="social_" class="btn btn-social-icon btn-google-plus" href="https://github.com/Brillianttyagi"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
                             <a id="social_" class="btn btn-social-icon btn-facebook" href="https://twitter.com/imaprogramr"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>

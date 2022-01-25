@@ -73,13 +73,24 @@ body{
 }
 .circlenew{
     position: absolute;
-    top: 40px;
+    top: 350px;
     width: 200px;
     height: 200px;
     background-image: url('../images/circlenew.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+#circlesmall{
+    width: 100px;
+    height: 100px;
+    right: 10px;
+}
+#circlemed{
+    top: 500px;
+    right: 50%;
+    width: 40px;
+    height: 40px;
 }
 .content{
     margin: 50px;
