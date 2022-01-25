@@ -2,6 +2,7 @@ body{
     padding:0px 0px 0px 0px;
     z-index:0;
     overflow-x: hidden;
+
 }
 .navbar-dark {
     background-color: #ffffff;
@@ -62,9 +63,23 @@ body{
 .navlinkh{
     text-decoration: none;
     margin: 9px;
+    color: rgb(140, 0, 255);
+    font-family:URW Chancery L, cursive;
+    text-transform: uppercase;
 }
 .Programming{
+    margin-top: 50px;
     width: 100%;
+}
+.circlenew{
+    position: absolute;
+    top: 40px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/circlenew.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .content{
     margin: 50px;
