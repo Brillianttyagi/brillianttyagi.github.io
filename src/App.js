@@ -24,10 +24,12 @@ function App() {
             <Route path="/about">
               <About/>
             </Route>
+            <Route path="/projects">
+              <Project/>
+            </Route>
             <Route path="/">
               <Main/>
               <Skill/>
-              <Project/>
             </Route>
           </Switch>
         <Foot/>

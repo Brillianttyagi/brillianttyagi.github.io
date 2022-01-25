@@ -5,7 +5,7 @@ import django from './images/django.svg'
 import sql from './images/sql.png'
 import bash from './images/bash.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGit,faPython,faJs,faAws,faNodeJs,faReact,faHtml5,faCss3,faLinux,faDrupal } from "@fortawesome/free-brands-svg-icons"
+import { faGit,faPython,faJs,faAws,faNode,faReact,faHtml5,faCss3,faLinux,faDrupal,faPhp } from "@fortawesome/free-brands-svg-icons"
 
 class Skill extends Component {
     render() { 
@@ -17,8 +17,8 @@ class Skill extends Component {
                     <Col className="p-3">
                         <span className="skills_icon"><FontAwesomeIcon icon={faPython} size="3x" /></span>
                         <span className="skills_icon"><FontAwesomeIcon icon={faJs} size="3x" /></span>
-                        <span className="skills_icon"><FontAwesomeIcon icon={faAws} size="3x" /></span>
-                        <span className="skills_icon"><FontAwesomeIcon icon={faNodeJs} size="3x" /></span>
+                        <span className="skills_icon"><FontAwesomeIcon icon={faPhp} size="3x" /></span>
+                        <span className="skills_icon"><FontAwesomeIcon icon={faNode} size="3x" /></span>
                         <span className="skills_icon"><FontAwesomeIcon icon={faReact} size="3x" /></span>
                         <span className="skills_icon"><FontAwesomeIcon icon={faHtml5} size="3x" /></span>
                         <span className="skills_icon"><FontAwesomeIcon icon={faCss3} size="3x" /></span>
@@ -28,9 +28,9 @@ class Skill extends Component {
                     <Col className="m-3">
                         <span className="skills_icon"><FontAwesomeIcon icon={faGit} size="3x" /></span>
                         <span className="skills_icon"><FontAwesomeIcon icon={faDrupal} size="3x" /></span>
-                        <span className="skills_icon"><FontAwesomeIcon icon={faGit} size="3x" /></span>
                         <span className="skills_icon"><FontAwesomeIcon icon={faLinux} size="3x" /></span>
                         <span className="skills_icon"><img width="100px" src={django} alt="django" /></span>
+                        <span className="skills_icon"><FontAwesomeIcon icon={faAws} size="3x" /></span>
                     </Col>
                 </Row>
                 <Row>

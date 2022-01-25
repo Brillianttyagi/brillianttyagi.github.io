@@ -11,9 +11,11 @@
     margin-right: 4px;
     padding: 30px;
     box-shadow: 1px 1px 2px rgb(66, 64, 64);
+    align-content: center;
+    text-align: center;
 }
 .skills_icon:hover{
-    color: red;
+    color: rgb(98, 0, 255);
     font-size: 16px;
     box-shadow: 2px 2px 8px rgb(31, 30, 30);
     -webkit-transition: all 1s ease;
