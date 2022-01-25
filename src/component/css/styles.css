@@ -80,6 +80,17 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: -100;
+}
+.backimage{
+    background-image: url('../images/backimage.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:calc(100% - 40px);
+    height: 400px;  
+    z-index: -100;
+    position: absolute;
 }
 #circlesmall{
     width: 100px;

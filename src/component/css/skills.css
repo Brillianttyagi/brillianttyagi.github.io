@@ -1,9 +1,12 @@
 .name_skill{
     text-align: center;
     margin-top: 150px;
+    z-index: 100;
 }
 .skills{
+    z-index: 100;
     text-align: center;
+    
 }
 .skills_icon{
     margin-top: 20px;
@@ -13,6 +16,7 @@
     box-shadow: 1px 1px 2px rgb(66, 64, 64);
     align-content: center;
     text-align: center;
+    background-color: white;
 }
 .skills_icon:hover{
     color: rgb(98, 0, 255);
