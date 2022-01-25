@@ -19,7 +19,7 @@ class Project extends Component {
                     <Col>
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ blog } />
                                 <Card.Body>
                                     <Card.Title>Blog</Card.Title>
@@ -37,7 +37,7 @@ class Project extends Component {
 
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" height="125px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJcook5YKIzQE_N889HVHaeS7UR9hWT1JgQw&usqp=CAU" />
                                 <Card.Body>
                                     <Card.Title>AIPOC</Card.Title>
@@ -54,7 +54,7 @@ class Project extends Component {
                     <Col>
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ lr } />
                                 <Card.Body>
                                     <Card.Title>Boston House Prediction</Card.Title>
@@ -71,7 +71,7 @@ class Project extends Component {
                     <Col>
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ c19 } />
                                 <Card.Body>
                                     <Card.Title>Covid19 Tracker</Card.Title>
@@ -93,7 +93,7 @@ class Project extends Component {
 
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ mp } />
                                 <Card.Body>
                                     <Card.Title>Music Player</Card.Title>
@@ -110,7 +110,7 @@ class Project extends Component {
 
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ np } />
                                 <Card.Body>
                                     <Card.Title>Notepad</Card.Title>
@@ -127,7 +127,7 @@ class Project extends Component {
 
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ cal } />
                                 <Card.Body>
                                     <Card.Title>Calculator</Card.Title>
@@ -146,7 +146,7 @@ class Project extends Component {
                     <Col>
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ speed } />
                                 <Card.Body>
                                     <Card.Title>Typing Speed Tester</Card.Title>
@@ -163,7 +163,7 @@ class Project extends Component {
                     <Col>
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ todo } />
                                 <Card.Body>
                                     <Card.Title>To Do List</Card.Title>
@@ -180,7 +180,7 @@ class Project extends Component {
                     <Col>
                     <Card className="m-3">
                         <div>
-                            <Card style={{ width: '18rem' }}>
+                            <Card>
                                 <Card.Img variant="top" src={ Calculator } />
                                 <Card.Body>
                                     <Card.Title>Web Calculator</Card.Title>
