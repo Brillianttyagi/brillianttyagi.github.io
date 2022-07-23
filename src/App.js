@@ -1,4 +1,5 @@
 import './css/App.css';
+import React, { useState } from 'react';
 import Navb from './component/navb';
 import Main from './component/Main';
 import Foot from './component/Footer'
@@ -11,6 +12,7 @@ import {
   Route
 } from "react-router-dom";
 import About from './component/About';
+import Cookies from 'universal-cookie';
 
 function App() {
   return (

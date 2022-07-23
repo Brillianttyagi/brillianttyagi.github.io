@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 90vh;
 }
 
 .App-logo {
@@ -23,7 +24,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.dark{
+  background:url('.././component/images/twinkle.gif') repeat top center;
+}
+.light{
+  background-color: white;
+}
 .App-link {
   color: #61dafb;
 }
