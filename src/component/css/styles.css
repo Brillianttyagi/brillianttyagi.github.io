@@ -41,6 +41,11 @@ body{
     width: fit-content;
     animation: typing 0.7s infinite ease;
     color: rgb(255, 0, 0);
+    min-height: 100px;
+}
+.changewrap{
+    min-height: 100px;
+    min-width: 180px;
 }
 .Hii{
     font-size: 25px;
@@ -265,4 +270,11 @@ body{
 }
 .mode img{
     border-radius: 100%;
+}
+@media only screen and (max-width: 660px) {
+
+    .circlenew{
+        display: none;
+    }
+    
 }

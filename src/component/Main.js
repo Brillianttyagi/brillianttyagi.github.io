@@ -55,7 +55,7 @@ class Main extends Component {
                     <Col className="content">
                         <Row><h1 className="Hii">Hii <img height="80px" alt="Hand" src="https://raw.githubusercontent.com/Brillianttyagi/Brillianttyagi/master/hand.gif"/> <br/></h1></Row>          
                         <Row><p className="name">I'm Deepanshu</p></Row>
-                        <Row><h5>I'm a <span id="change">{ this.state.letter }</span></h5></Row>
+                        <Row className='changewrap'><h5>I'm a <span id="change">{ this.state.letter }</span></h5></Row>
 
                     </Col>
                     <Col><img className="Programming" src={ Work } alt="Programming guy"/></Col>
