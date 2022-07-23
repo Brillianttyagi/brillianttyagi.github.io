@@ -4,11 +4,11 @@
 }
 .social_links{
     text-decoration: none;
+    padding: 10px 2px;
 
 }
 .social_links:hover{
     text-decoration: none;
-    text-transform: capitalize;
 }
 
 #textarea{

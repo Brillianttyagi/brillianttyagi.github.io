@@ -4,18 +4,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Work from './images/work.svg'
 import Circle from './images/circle.svg'
 import './css/styles.css'
+import Cookies from 'universal-cookie';
+
 class Main extends Component {
     constructor(props){
         super(props);
+        const cookies = new Cookies();
+        var prevtheme = cookies.get('mytheme');
+        var theme = "light";
+        if (prevtheme==undefined){
+            theme = "light";
+        }
+        else if(prevtheme=="dark"){
+            theme = "dark";
+        }
+        else{
+            theme = "light";
+        }
+        
         this.state = {
-            text:['Pythonista','Developer','Coder.','Student'],
+            text:['Pythonista','Developer','Coder.','Data Scientist'],
             count:0,
             index:0,
             currenttext:"",
-            letter:""
+            letter:"",
+            theme:theme,
         }
+
+        
     }
     componentDidMount(){
+        
         setInterval(() => {
             if(this.state.count === this.state.text.length){
                 this.setState({count:0})
@@ -30,7 +49,7 @@ class Main extends Component {
     }
     render() { 
         return ( 
-            <Container>
+            <Container className={this.state.theme}>
                 <Col><img id="Circle" src={ Circle } alt="circle"/></Col>
                 <Row>
                     <Col className="content">

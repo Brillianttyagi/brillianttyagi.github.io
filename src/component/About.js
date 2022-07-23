@@ -1,7 +1,31 @@
 import React, { Component } from 'react'
 import { Container,Row,Col,Card } from 'react-bootstrap'
 import name from './images/name.svg'
+import Cookies from 'universal-cookie';
+
 class About extends Component {
+    constructor(props){
+        super(props);
+        const cookies = new Cookies();
+        var prevtheme = cookies.get('mytheme');
+        if (prevtheme==undefined){
+            this.state = {
+                theme:"whitee",
+            }
+        }
+        else if(prevtheme=="dark"){
+            this.state = {
+                theme:"darkk",
+            }
+        }
+        else{
+            this.state = {
+                theme:"whitee",
+            }
+        }
+        
+        
+    }
     render() { 
         return ( 
             <Container>
@@ -12,18 +36,20 @@ class About extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <Card className="m-3" style={{ width: '18rem' }}>
-                            <Card.Img style={{ borderRadius:"100%" }} variant="top" src="https://pbs.twimg.com/profile_images/1385916880938946570/kVbpG2jf_400x400.jpg" alt="deepanshu" />
+                        <Card style={{ borderRadius:"100%",width: '18rem' }} className="m-3" >
+                            <Card.Img style={{ borderRadius:"100%" }} variant="top" src="https://avatars.githubusercontent.com/u/48671623?v=4" alt="deepanshu" />
                         </Card>
                     </Col>
                     <Col>
-                    <Card style={{marginBottom : "30px"}}>
+                    <Card id={this.state.theme} style={{marginBottom : "30px"}}>
                             <Card.Body>
                             <Card.Title>About</Card.Title>
                             <Card.Text>
-                            I'm Deepanshu tyagi,currently persuing Btech in Computer science engineering from Dr.APJ abdul kalam
-                            technical University.I'm a Student and continuously learning to upgrad my knowledge, with keen understanding of Python
-                            ,Html, CSS, Django, Data structure.
+                            Data Engineer at Daffodil Solution Gurugram, India<br/>
+                            - Staging, transforming and loading structured and semi-structured data to build a data platform for Analytics.<br/>
+                            - Worked on open source data engineering tools to develop the pipelines.<br/>
+                            - Learning AWS and GCP tools for Data Engineering.<br/>
+                            - Web developer with good knowledge of Frontend and Backend tools.
                             </Card.Text>
                         </Card.Body>
                     </Card>

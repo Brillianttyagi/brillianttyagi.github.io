@@ -12,7 +12,7 @@ class Contact extends Component {
                 <Row>
                     <Col className="m-5">
                         <Row style={{fontSize:"20px"}}>Have questions?</Row><br/>
-                        <a href="https://github.com/Brillianttyagi" className="social_links"><Row style={{ color:"black" }}><FontAwesomeIcon icon={faGithub} size="3x" />Follow me on Github</Row></a>
+                        <a href="https://github.com/Brillianttyagi" className="social_links"><Row style={{ color:"gray" }}><FontAwesomeIcon icon={faGithub} size="3x" />Follow me on Github</Row></a>
                         <a href="https://twitter.com/imaprogramr" className="social_links"><Row style={{ color:"rgb(0, 183, 255)" }}><FontAwesomeIcon icon={faTwitter} size="3x" />Like me on twitter</Row></a>
                         <a href="https://www.instagram.com/ttyagi_boy84/" className="social_links"><Row style={{ color:"red" }}><FontAwesomeIcon icon={faInstagram} size="3x" />Follow me on instagram</Row></a>
                         <a href="https://www.codechef.com/users/yesimaprogramr" className="social_links"><Row style={{ color:"rgb(113, 123, 133)" }}><FontAwesomeIcon icon={faCodepen} size="3x" />Check me on codechef</Row></a>
