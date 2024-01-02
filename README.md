@@ -8,5 +8,3 @@
 # ## How to deploy
 #
 # npm run deploy
-#
-# ## How to update
