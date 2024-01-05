@@ -47,6 +47,10 @@ class Main extends Component {
             }
         }, 400);
     }
+    componentDidUpdate(){
+        const cookies = new Cookies();
+        cookies.set('mytheme', this.state.theme, { path: '/' });
+    }
     render() { 
         return ( 
             <Container className={this.state.theme}>
