@@ -63,7 +63,7 @@ class Main extends Component {
                 <div className='circlenew'></div>
                 <div className='circlenew' id="circlesmall"></div>
                 <div className='circlenew' id="circlemed"></div>
-
+                <div className='circlenew' id="circlebig"></div>
             </Container>
          );
     }
