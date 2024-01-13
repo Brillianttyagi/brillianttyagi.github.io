@@ -50,10 +50,12 @@ class About extends Component {
                             - Worked on open source data engineering tools to develop the pipelines.<br/>
                             - Learning AWS and GCP tools for Data Engineering.<br/>
                             - Web developer with good knowledge of Frontend and Backend tools.
+                            - Good knowledge of Data Structures and Algorithms.<br/>
                             </Card.Text>
                         </Card.Body>
                     </Card>
                     </Col>
+                    <
                 </Row>
             </Container>
          );
