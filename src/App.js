@@ -1,40 +1,64 @@
 import './css/App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import Navb from './component/navb';
 import Main from './component/Main';
-import Foot from './component/Footer'
+import Footer from './component/Footer'
 import Skill from './component/Skills';
 import Project from './component/Project';
 import Contact from './component/Contactus';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
 import About from './component/About';
-import Cookies from 'universal-cookie';
+import Blogs from './component/Blogs';
+import { BrowserRouter as Router } from "react-router-dom";
+import { motion } from 'framer-motion';
+
+const PageTransition = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{ duration: 0.3 }}
+  >
+    {children}
+  </motion.div>
+);
 
 function App() {
   return (
     <div className="App">
       <Router basename={process.env.PUBLIC_URL}>
         <Navb/>
-          <Switch>
-            <Route path="/contact">
-              <Contact/>
-            </Route>
-            <Route path="/about">
-              <About/>
-            </Route>
-            <Route path="/projects">
-              <Project/>
-            </Route>
-            <Route path="/">
-              <Main/>
-              <Skill/>
-            </Route>
-          </Switch>
-        <Foot/>
+        <PageTransition>
+          {/* Hero Section */}
+          <section id="home">
+            <Main/>
+          </section>
+          
+          {/* Skills Section */}
+          <section id="skills">
+            <Skill/>
+          </section>
+          
+          {/* About Section */}
+          <section id="about">
+            <About/>
+          </section>
+          
+          {/* Projects Section */}
+          <section id="projects">
+            <Project/>
+          </section>
+          
+          {/* Blogs Section */}
+          <section id="blogs">
+            <Blogs/>
+          </section>
+          
+          {/* Contact Section */}
+          <section id="contact">
+            <Contact/>
+          </section>
+        </PageTransition>
+        <Footer/>
       </Router>
     </div>
   );

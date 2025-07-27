@@ -1,111 +1,170 @@
-import React, { Component } from 'react'
-import './css/styles.css'
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import './css/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-    Link
-  } from "react-router-dom";
-import { Navbar, Nav } from 'react-bootstrap'
-import Logo from './images/logo.png'
-import Moon from './images/sun.png'
-import Sun from './images/moon.png'
+import Logo from './images/logo.png';
 
-import Cookies from 'universal-cookie';
+const Navb = () => {
+  const [theme, setTheme] = useState('light');
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
+  useEffect(() => {
+    // Get theme from localStorage
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    applyTheme(savedTheme);
+  }, []);
 
-class Navb extends Component {
-    constructor(props){
-        super(props);
-        const cookies = new Cookies();
-        var prevtheme = cookies.get('mytheme');
-        if (prevtheme==undefined){
-            this.state = {
-                theme:"light",
-                pic:Sun,
-            }
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+
+      // Update active section based on scroll position
+      const sections = ['home', 'skills', 'about', 'projects', 'blogs', 'contact'];
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
         }
-        else if(prevtheme=="dark"){
-            this.state = {
-                theme:"dark",
-                pic:Moon,
-            }
-        }
-        else{
-            this.state = {
-                theme:"light",
-                pic:Sun,
-            }
-        }
-        var x = document.getElementById("root");
-        console.log(x)
-        x.classList = "root";
-        x.classList.add(cookies.get('mytheme'));
+        return false;
+      });
+      
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const applyTheme = (newTheme) => {
+    document.documentElement.setAttribute('data-theme', newTheme);
+    document.body.classList.remove('light', 'dark');
+    document.body.classList.add(newTheme);
+  };
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'about', label: 'About' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'blogs', label: 'Blogs' },
+    { id: 'contact', label: 'Contact' }
+  ];
+
+  const isActiveSection = (sectionId) => {
+    return activeSection === sectionId;
+  };
+
+  return (
+    <Navbar 
+      expand="lg" 
+      fixed="top" 
+      className={`navbar-modern ${scrolled ? 'scrolled' : ''}`}
+      variant={theme}
+    >
+      <Container>
+        <Navbar.Brand 
+          className="brand-container" 
+          onClick={() => scrollToSection('home')}
+          style={{ cursor: 'pointer' }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="d-flex align-items-center"
+          >
+            <img 
+              src={Logo} 
+              alt="Portfolio Logo" 
+              width="45" 
+              height="45"
+              className="rounded-circle"
+            />
+          </motion.div>
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
-    }
-    settheme = ()=> {
-        const cookies = new Cookies();
-        var prevtheme = cookies.get('mytheme');
-        if (prevtheme==undefined){
-            cookies.set('mytheme', 'dark', { path: '/' }); 
-        }
-        else if(prevtheme=="dark"){
-            cookies.set('mytheme', 'light', { path: '/' }); 
-        }
-        else{
-            cookies.set('mytheme', 'dark', { path: '/' }); 
-        }
-        var x = document.getElementsByClassName("container");
-        for (let i = 0; i < x.length; i++) {
-            console.log(x)
-            x[i].classList = "container";
-            x[i].classList.add(cookies.get('mytheme'));
-          }
-          var x = document.getElementsByClassName("App");
-          for (let i = 0; i < x.length; i++) {
-              console.log(x)
-              x[i].classList = "App";
-              x[i].classList.add(cookies.get('mytheme'));
-            }
-        console.log(document.getElementsByClassName("container"));
-        this.setState({theme:cookies.get('mytheme')});
-        if (cookies.get('mytheme')=="dark"){
-            this.setState({pic:Moon});
-        }
-        else{
-            this.setState({pic:Sun});
-        }
-        var c = document.getElementsByClassName("card");
-        for (let i = 0; i < c.length; i++) {
-            var th = cookies.get('mytheme');
-            if (th==undefined){
-                c[i].id = "whitee";
-            }
-            else if (th=="light"){
-                c[i].id = "whitee";
-            }
-            else{
-                c[i].id = "darkk";
-            }
-                
-          }
-    }
-    render() { 
-        return (
-            <Navbar className="Navbar" bg={this.state.theme} expand="lg" sticky="top">
-                <Navbar.Brand href="/"><img width="50px" src={ Logo } alt="brand"/></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                    <Link className="navlinkh" to="/">Home</Link>
-                    <Link className="navlinkh" to="/projects">Projects</Link>
-                    <a className="navlinkh" target='_blank' href="https://drive.google.com/file/d/1BUQDlfjI15MYQKErLx157MRJk30hbuQT/view?usp=sharing">Resume</a>
-                    <Link className="navlinkh" to="/Contact">Contact Me</Link>
-                    <Link className="navlinkh" to="/About">About Me</Link>
-                    <button className='mode' onClick={this.settheme}><img width="40px" src={ this.state.pic } alt="brand"/></button>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-        )
-    }
-}
- 
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto align-items-center">
+            {navItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Nav.Link 
+                  className={`navlinkh ${isActiveSection(item.id) ? 'active' : ''}`}
+                  onClick={() => scrollToSection(item.id)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {item.label}
+                </Nav.Link>
+              </motion.div>
+            ))}
+            
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <Nav.Link
+                href="https://drive.google.com/file/d/1BUQDlfjI15MYQKErLx157MRJk30hbuQT/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="navlinkh resume-link"
+              >
+                Resume
+              </Nav.Link>
+            </motion.div>
+
+            <motion.button
+              className="theme-toggle ms-3"
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, rotate: -180 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={{ delay: 0.5 }}
+              aria-label="Toggle theme"
+            >
+              <FontAwesomeIcon 
+                icon={theme === 'light' ? faMoon : faSun} 
+                size="lg"
+                className={`theme-icon ${theme}`}
+              />
+            </motion.button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
+
 export default Navb;

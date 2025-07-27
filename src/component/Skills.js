@@ -1,72 +1,203 @@
-import React, { Component } from 'react'
-import { Col, Container,Row } from 'react-bootstrap'
-import './css/skills.css'
-import airflow from './images/skills/AirflowLogo.png'
-import aws from './images/skills/aws.png'
-import css from './images/skills/css.png'
-import django from './images/skills/djnago.png'
-import drupal from './images/skills/drupal.png'
-import git from './images/skills/git.png'
-import google from './images/skills/google.png'
-import html from './images/skills/html.png'
-import js from './images/skills/js.png'
-import kubernates from './images/skills/kubernates.png'
-import machine from './images/skills/machine.png'
-import mysql from './images/skills/MySQL-Logo.png'
-import numpy from './images/skills/numpy.png'
-import pandas from './images/skills/Pandas_logo.svg.png'
-import php from './images/skills/php.png'
-import posgres from './images/skills/posgres.png'
-import python from './images/skills/python.png'
-import react from './images/skills/react.png'
-import ubuntu from './images/skills/ubuntu-logo.png'
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faCode, 
+  faCloud, 
+  faDatabase, 
+  faChartLine, 
+  faCogs,
+  faServer
+} from '@fortawesome/free-solid-svg-icons';
+import './css/skills.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGit,faPython,faJs,faAws,faNode,faReact,faHtml5,faCss3,faLinux,faDrupal,faPhp } from "@fortawesome/free-brands-svg-icons"
+const Skills = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
 
-class Skill extends Component {
-    render() { 
-        return ( 
-            <Container>
-                <div className="p-3">
-                <h1 class="name_skill">Skills</h1>
-                <Row className="skills">
-                    <br/>
-                    <Col className="p-3">
-                        <span className="skills_icon"><img width="60px" src={python} alt="python" /></span>
-                        <span className="skills_icon"><img height="35px" src={airflow} alt="airflow" /></span>
-                        <span className="skills_icon"><img width="70px" src={django} alt="djnago" /></span>
-                        <span className="skills_icon"><img width="70px" src={google} alt="gcp" /></span>
-                        <span className="skills_icon"><img width="60px" src={aws} alt="aws" /></span>
-                        <span className="skills_icon"><img width="65px" src={mysql} alt="mysql" /></span>
-                        <span className="skills_icon"><img width="55px" src={posgres} alt="posgres" /></span>
-                        <span className="skills_icon"><img height="25px" src={kubernates} alt="posgres" /></span>
-
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="m-3">
-                        <span className="skills_icon"><img height="70px" src={machine} alt="Machine learning" /></span>
-                        <span className="skills_icon"><img width="80px" src={pandas} alt="Pandas" /></span>
-                        <span className="skills_icon"><img width="80px" src={numpy} alt="NUmpy" /></span>
-                        <span className="skills_icon"><img width="55px" src={git} alt="posgres" /></span>
-                        <span className="skills_icon"><img width="55px" src={ubuntu} alt="posgres" /></span>
-                        <span className="skills_icon"><img width="55px" src={js} alt="js" /></span>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <span className="skills_icon"><img width="55px" src={html} alt="HTML" /></span>
-                        <span className="skills_icon"><img width="50px" src={css} alt="css" /></span>
-                        <span className="skills_icon"><img width="50px" src={drupal} alt="drupal" /></span>
-                        <span className="skills_icon"><img width="55px" src={react} alt="react" /></span>
-                        <span className="skills_icon"><img width="60px" src={php} alt="php" /></span>
-                    </Col>
-                </Row>
-                </div>
-            </Container>
-         );
+  const skillCategories = [
+    {
+      category: "Data Engineering Tools",
+      icon: faCogs,
+      color: "#6366f1",
+      skills: [
+        "Apache Airflow",
+        "PySpark", 
+        "Jupyter Notebook",
+        "Apache Kafka",
+        "Databricks"
+      ]
+    },
+    {
+      category: "GCP Services",
+      icon: faCloud,
+      color: "#4285f4",
+      skills: [
+        "Dataflow",
+        "Dataproc", 
+        "BigQuery",
+        "Cloud Composer",
+        "Cloud SQL",
+        "Cloud Storage"
+      ]
+    },
+    {
+      category: "AWS Services", 
+      icon: faServer,
+      color: "#ff9900",
+      skills: [
+        "AWS Glue",
+        "Lambda",
+        "S3", 
+        "Redshift",
+        "Athena"
+      ]
+    },
+    {
+      category: "Programming & Databases",
+      icon: faDatabase,
+      color: "#10b981",
+      skills: [
+        "Python",
+        "PostgreSQL",
+        "MySQL",
+        "Git"
+      ]
+    },
+    {
+      category: "Web Technologies",
+      icon: faCode,
+      color: "#8b5cf6",
+      skills: [
+        "Django",
+        "Flask",
+        "FastAPI"
+      ]
     }
-}
- 
-export default Skill;
+  ];
+
+  const achievements = [
+    {
+      number: "4+",
+      label: "Years Experience",
+      icon: faChartLine
+    },
+    {
+      number: "10M+", 
+      label: "Records Processed Daily",
+      icon: faDatabase
+    },
+    {
+      number: "50+",
+      label: "Data Pipelines Built", 
+      icon: faCogs
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <motion.section 
+      className="skills-section-modern"
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
+      <Container>
+        {/* Header */}
+        <motion.div className="text-center mb-5" variants={cardVariants}>
+          <h2 className="section-title">Skills & Technologies</h2>
+          <p className="section-subtitle">
+            Core technologies and tools I use to build robust data solutions
+          </p>
+        </motion.div>
+
+        {/* Skills Grid */}
+        <Row className="g-4 mb-5">
+          {skillCategories.map((category, index) => (
+            <Col lg={4} md={6} key={index}>
+              <motion.div variants={cardVariants}>
+                <Card className="skill-card-modern h-100">
+                  <Card.Body className="text-center p-4">
+                    <div 
+                      className="skill-icon-modern mb-3"
+                      style={{ color: category.color }}
+                    >
+                      <FontAwesomeIcon icon={category.icon} size="2x" />
+                    </div>
+                    <h5 className="skill-category-title">{category.category}</h5>
+                    <div className="skills-list-modern">
+                      {category.skills.map((skill, skillIndex) => (
+                        <motion.span
+                          key={skillIndex}
+                          className="skill-tag-modern"
+                          style={{ borderColor: category.color }}
+                          whileHover={{ 
+                            scale: 1.05,
+                            backgroundColor: category.color,
+                            color: 'white'
+                          }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
+          ))}
+        </Row>
+
+        {/* Achievements */}
+        <motion.div variants={cardVariants}>
+          <Row className="achievements-row">
+            {achievements.map((achievement, index) => (
+              <Col md={4} key={index}>
+                <motion.div 
+                  className="achievement-card-modern text-center"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="achievement-icon-modern mb-2">
+                    <FontAwesomeIcon icon={achievement.icon} size="2x" />
+                  </div>
+                  <h3 className="achievement-number">{achievement.number}</h3>
+                  <p className="achievement-label">{achievement.label}</p>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </motion.div>
+      </Container>
+    </motion.section>
+  );
+};
+
+export default Skills;

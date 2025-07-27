@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   min-height: 90vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .App-logo {
@@ -24,12 +25,24 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.dark{
-  background:url('.././component/images/twinkle.gif') repeat top center;
+
+/* Updated theme classes to work with data-theme */
+body.dark {
+  background: url('.././component/images/twinkle.gif') repeat top center;
 }
-.light{
+
+[data-theme="dark"] body {
+  background: url('.././component/images/twinkle.gif') repeat top center;
+}
+
+body.light {
   background-color: white;
 }
+
+[data-theme="light"] body {
+  background-color: white;
+}
+
 .App-link {
   color: #61dafb;
 }

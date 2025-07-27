@@ -1,30 +1,156 @@
-.name_skill{
-    text-align: center;
-    margin-top: 150px;
-    z-index: 100;
+/* Modern Skills Section Styles */
+.skills-section-modern {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
 }
-.skills{
-    z-index: 100;
-    text-align: center;
-    
+
+/* Dark mode support */
+[data-theme="dark"] .skills-section-modern {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
 }
-.skills_icon{
-    margin-top: 20px;
-    margin-left: 4px;
-    margin-right: 4px;
-    align-content: center;
-    text-align: center;
+
+/* Skill Cards */
+.skill-card-modern {
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  background: white;
+  height: 100%;
 }
-.skills_icon:hover{
-    color: rgb(98, 0, 255);
-    font-size: 16px;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+
+[data-theme="dark"] .skill-card-modern {
+  background: var(--bg-secondary);
 }
-.skills_icon img:hover{
-    filter: saturate(3);
-    filter: sepia(100%);
+
+.skill-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.skill-icon-modern {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-category-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Skills List */
+.skills-list-modern {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-tag-modern {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: fit-content;
+}
+
+[data-theme="dark"] .skill-tag-modern {
+  border-color: var(--border-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-tag-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Achievements Section */
+.achievements-row {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem 1rem;
+  box-shadow: var(--shadow-md);
+  margin-top: 3rem;
+}
+
+[data-theme="dark"] .achievements-row {
+  background: var(--bg-secondary);
+}
+
+.achievement-card-modern {
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.achievement-card-modern:hover {
+  background: rgba(99, 102, 241, 0.05);
+}
+
+[data-theme="dark"] .achievement-card-modern:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.achievement-icon-modern {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.achievement-label {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section-modern {
+    padding: 3rem 0;
+  }
+
+  .achievements-row {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .achievement-number {
+    font-size: 2rem;
+  }
+
+  .skill-tag-modern {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-list-modern {
+    gap: 0.3rem;
+  }
+  
+  .skill-tag-modern {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
 }
