@@ -39,23 +39,9 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: faEnvelope,
-      title: "Email",
-      value: "deepanshu.tyagi@example.com",
-      link: "mailto:deepanshu.tyagi@example.com",
-      color: "#ea4335"
-    },
-    {
-      icon: faPhone,
-      title: "Phone",
-      value: "+91 XXXXX XXXXX",
-      link: "tel:+91XXXXXXXXX",
-      color: "#34a853"
-    },
-    {
       icon: faMapMarkerAlt,
       title: "Location",
-      value: "Gurugram, India",
+      value: "Uttar Pradesh, India",
       link: "#",
       color: "#4285f4"
     }

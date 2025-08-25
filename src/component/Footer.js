@@ -36,12 +36,6 @@ const Footer = () => {
       url: "https://www.codechef.com/users/yesimaprogramr",
       label: "CodeChef",
       color: "#5b4638"
-    },
-    {
-      icon: faEnvelope,
-      url: "mailto:deepanshu.tyagi@example.com",
-      label: "Email",
-      color: "#ea4335"
     }
   ];
 
